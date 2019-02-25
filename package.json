@@ -1,0 +1,42 @@
+{
+  "name": "sms-management-api-mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hadijahkyampeire/sms-management-api-mongo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hadijahkyampeire/sms-management-api-mongo/issues"
+  },
+  "homepage": "https://github.com/hadijahkyampeire/sms-management-api-mongo#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-async-handler": "^1.1.4",
+    "indicative": "^5.0.8",
+    "jsonwebtoken": "^8.5.0",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.4.14",
+    "supertest": "^3.3.0"
+  },
+  "nyc": {
+    "exclude": [
+      "tests/*",
+      "models"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^24.1.0",
+    "nodemon": "^1.18.10"
+  }
+}
