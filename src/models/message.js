@@ -10,8 +10,15 @@ var messageScheme = mongoose.Schema({
   created: { type: Date, default: Date.now },
 });
 
-messageScheme.static('forContact', function(phoneNumber, filters = {}) {
+messageScheme.static('getSingleForContact', function(phoneNumber, filters = {}) {
   return this.findOne({
+    ...filters,
+    $or: [{ receiver: phoneNumber }, { sender: phoneNumber }],
+  });
+});
+
+messageScheme.static('getAllForContact', function(phoneNumber, filters = {}) {
+  return this.find({
     ...filters,
     $or: [{ receiver: phoneNumber }, { sender: phoneNumber }],
   });

@@ -6,7 +6,7 @@ const validate = require('../utils/validation');
 const getSingleMessage = async req => {
   const { id } = req.params;
   const { phone_number } = req.currentContact;
-  return await Message.forContact(phone_number, { _id: id });
+  return await Message.getSingleForContact(phone_number, { _id: id });
 };
 
 const messageRules = () => ({
@@ -28,7 +28,7 @@ module.exports = {
 
   //get all messages by receiver or sender
   async index(req, res) {
-    const messages = await Message.forContact(req.currentContact.phone_number);
+    const messages = await Message.getAllForContact(req.currentContact.phone_number);
     return res.json(messages);
   },
 
