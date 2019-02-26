@@ -1,0 +1,15 @@
+language: node_js
+
+node_js: 11
+services: mongodb
+env:
+  global:
+    - TEST_DATABASE_URL=mongodb://localhost:27017/mydb_test
+    - SECRET=secret
+
+cache: yarn
+
+before_script:
+  - sleep 15
+
+script: yarn test --coverage
