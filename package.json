@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "jest --detectOpenHandles",
-    "start": "nodemon"
+    "start:dev": "nodemon"
   },
   "repository": {
     "type": "git",
