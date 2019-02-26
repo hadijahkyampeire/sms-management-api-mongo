@@ -13,3 +13,6 @@ before_script:
   - sleep 15
 
 script: yarn test --coverage
+
+after_success:
+  - coveralls < coverage/lcov.info

@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "coveralls": "^3.0.3",
     "jest": "^24.1.0",
     "nodemon": "^1.18.10"
   }

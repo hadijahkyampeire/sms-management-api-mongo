@@ -27,9 +27,7 @@ module.exports = {
   coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  // coveragePathIgnorePatterns: [
-  //   "/node_modules/"
-  // ],
+  coveragePathIgnorePatterns: ['/node_modules/', '/src/models', 'src/middleware', '/coverage'],
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
@@ -161,7 +159,7 @@ module.exports = {
   // testURL: "http://localhost",
 
   // Setting this value to "fake" allows the use of fake timers for functions such as "setTimeout"
-  timers: 'fake',
+  timers: 'fake'
 
   // A map from regular expressions to paths to transformers
   // transform: null,
